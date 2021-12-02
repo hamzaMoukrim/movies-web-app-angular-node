@@ -1,0 +1,25 @@
+.drop-list {
+  display: flex;
+}
+.drop-list .dropdown {
+  padding: 10px;
+}
+
+.page-link {
+  padding: 8px;
+
+  transition: 400ms ease;
+  color: black;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+}
+
+.page-link:hover {
+  background-color: #86c023;
+  color: #fff;
+}
+
+.spinner-border {
+  position: absolute;
+  top: 50%;
+}

@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let film of films" class="col-md-4 col-xl-3 col-sm-6 mb-2">
+      <app-card-film [film]="film" (showDetails)="onShowDetails(film)">
+      </app-card-film>
+    </div>
+  </div>
+</div>
+
+<div class="row align-items-center">
+  <div class="d-flex justify-content-center">
+    <nav aria-label="...">
+      <ul class="pagination">
+        <li class="page-item" [ngClass]="{ disabled: currentPage === 1 }">
+          <button class="page-link" (click)="onPrev(userInput)" tabindex="-1">
+            Previous
+          </button>
+        </li>
+
+        <li
+          class="page-item"
+          [ngClass]="{ disabled: currentPage === totalPages }"
+        >
+          <button class="page-link" (click)="onLoadMore(userInput)">
+            Next
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

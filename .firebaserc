@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "movies-app-e4089": {
+      "hosting": {
+        "movies-app": [
+          "movies-app-e4089"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "movies-app-e4089"
+  }
+}

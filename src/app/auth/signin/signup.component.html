@@ -1,0 +1,141 @@
+<!-- <form (ngSubmit)="onSignup(name, email, password)">
+  <div class="col-lg-12 login-title">SIGN UP</div>
+  <div class="divider"></div>
+
+  <div class="form-group">
+    <label class="form-control-label">NAME</label>
+    <input type="text" class="form-control" required />
+  </div>
+  <div class="form-group">
+    <label class="form-control-label">EMAIL</label>
+    <input type="email" class="form-control" (ngModel)="(email)" required />
+  </div>
+  <div class="form-group">
+    <label class="form-control-label">PASSWORD</label>
+    <input type="password" class="form-control" minlength="6" required />
+  </div>
+
+  <div class="col-lg-12 loginbttm">
+    <div class="col-lg-6 login-btm login-text">
+     
+      <button
+        [routerLink]="['signup']"
+        routerLinkActive="router-link-active"
+        type="submit"
+        (click)="onSignup(name, email, password)"
+        class="btn btn-outline-primary"
+      >
+        Register
+      </button>
+    </div>
+
+    <div class="col-lg-6 login-btm login-button">
+      <a
+        [routerLink]="['/auth']"
+        routerLinkActive="router-link-active"
+        type="submit"
+        class="btn btn-outline-primary"
+      >
+        LOGIN
+      </a>
+    </div>
+  </div>
+</form> -->
+
+<form class="signup" (ngSubmit)="onSignup()" [formGroup]="form">
+  <h1>Create account</h1>
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="text"
+      name="name"
+      id="name"
+      formControlName="name"
+      required
+    />
+    <label class="signup__label" for="name">Name</label>
+  </div>
+
+  <div *ngIf="f.name.touched && f.name.invalid" class="">
+    <div *ngIf="f.name.errors && f.name.errors.required">Name is required.</div>
+
+    <div *ngIf="f.name.errors && f.name.errors.minlength">
+      Name should be 3 character.
+    </div>
+  </div>
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="text"
+      formControlName="username"
+      id="username"
+      required
+    />
+    <label class="signup__label" for="email">Username</label>
+  </div>
+
+  <!-- 
+
+ -->
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="text"
+      name="phoneNumber"
+      id="phoneNumber"
+      formControlName="phoneNumber"
+      required
+    />
+    <label class="signup__label" for="name">Phone Number</label>
+  </div>
+
+  <div *ngIf="f.phoneNumber.touched && f.phoneNumber.invalid" class="">
+    <div *ngIf="f.phoneNumber.errors && f.phoneNumber.errors.required">
+      Name is required.
+    </div>
+  </div>
+
+  <!--  -->
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="password"
+      formControlName="password"
+      id="password"
+      required
+    />
+    <label class="signup__label" for="password">Password</label>
+  </div>
+
+  <!--  -->
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="password"
+      formControlName="passwordConfirm"
+      id="passwordConfirm"
+      required
+    />
+    <label class="signup__label" for="passwordConfirm">Confirm Password</label>
+  </div>
+  <!--  -->
+
+  <button type="submit">Sign up</button>
+
+  <h2>
+    Already have an account?
+    <a
+      [routerLink]="['/auth']"
+      routerLinkActive="router-link-active"
+      type="submit"
+      class="btn btn-outline-primary"
+    >
+      SIGN IN
+    </a>
+  </h2>
+</form>

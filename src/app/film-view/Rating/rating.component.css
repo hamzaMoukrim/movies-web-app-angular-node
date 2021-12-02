@@ -1,0 +1,24 @@
+.featured_movie_rating .stars .star {
+  color: goldenrod;
+  padding: 0.15vh;
+}
+
+.featured_movie_rating .stars {
+  display: flex;
+  color: goldenrod;
+  font-size: 2.75vh;
+  padding-top: 1vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured_movie_rating .movie_average {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  font-size: 2.5vh;
+  display: inline-block;
+  padding-left: 1vh;
+}
+.displayFlex {
+  display: flex;
+}

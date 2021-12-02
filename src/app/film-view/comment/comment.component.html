@@ -1,0 +1,61 @@
+<div class="">
+  <div class="col-md-12" id="fbcomment">
+    <div class="header_comment">
+      <div class="row">
+        <div class="col-md-6 text-left">
+          <div *ngIf="comments.length > 0; else noComment">
+            <span class="count_comment">{{ comments.length }} Comments</span>
+          </div>
+          <ng-template #noComment>
+            <span class="count_comment"> Comments</span></ng-template
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="body_comment">
+      <div class="row">
+        <div class="avatar_comment col-md-1">
+          <img
+            src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
+            alt="avatar"
+          />
+        </div>
+        <div class="box_comment col-md-11">
+          <textarea
+            [(ngModel)]="comment"
+            class="commentar"
+            placeholder="Add a comment..."
+          >
+          </textarea>
+          <div class="box_post">
+            <div class="pull-right">
+              <button (click)="submitComment()" type="button">Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <ul id="list_comment" class="col-md-12">
+          <li *ngFor="let c of comments" class="box_result row">
+            <div class="displayFlex avatar_comment col-md-1">
+              <img
+                src="https://static.xx.fbcdn.net/rsrc.php/v1/yi/r/odA9sNLrE86.jpg"
+                alt="avatar"
+              />
+            </div>
+            <div class="displayFlex result_comment col-md-11">
+              <h4 class="displayFlex">{{ c.user.name }}</h4>
+              <p>
+                {{ c.comment }}
+              </p>
+
+              <ul class="child_replay"></ul>
+            </div>
+            <hr />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

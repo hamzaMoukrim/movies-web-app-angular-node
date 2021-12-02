@@ -1,0 +1,173 @@
+/* hhhhhhhhhhhhhhhhhhhhhhhhhhh */
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+/* //////////////////////////////// */
+
+/* //////////////////////////////////// */
+#banner {
+  background: url("https://res.cloudinary.com/dw369yzsh/image/upload/v1470916846/banner_background_ez243c.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* width: 100%;
+  max-width: 100%; */
+  padding: 5.5em 0;
+}
+
+.spinner-border {
+  position: absolute;
+  top: 50%;
+}
+
+#banner #banner_content_wrapper {
+  width: 900px;
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#banner #poster {
+  width: 275px;
+  position: relative;
+  float: left;
+}
+#banner #poster .featured_image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+  -moz-box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+  box-shadow: 0px 0px 76px 0px rgba(0, 0, 0, 0.47);
+}
+#banner #poster .play_button {
+  position: absolute;
+  width: 80px;
+  left: 50%;
+  top: 50%;
+  margin: -40px 0 0 -40px;
+}
+#banner #content {
+  float: left;
+  width: 500px;
+  margin-left: 100px;
+}
+#banner #content .title {
+  display: inline;
+  font-size: 1.75em;
+  color: #fff;
+}
+#banner #content .ratings {
+  display: inline;
+  margin-left: 1em;
+}
+#banner #content .ratings i {
+  color: #73e298;
+  font-size: 1.35em;
+  margin: 0 0.15em;
+}
+#banner #content .ratings .inactive {
+  color: #48494d;
+}
+#banner #content .description {
+  color: #bbbebf;
+  font-size: 1em;
+  line-height: 2;
+}
+#banner #content .info {
+  color: #fff;
+  font-size: 0.8em;
+  font-weight: 700;
+  margin-top: 3em;
+}
+#banner #content .info span {
+  margin: 0 0.5em;
+}
+
+/* 
+mn hna
+
+*/
+
+@media only screen and (max-width: 875px) {
+  #banner #banner_content_wrapper #poster {
+    /* width: 250px; */
+  }
+
+  #banner #banner_content_wrapper {
+    width: 650px;
+  }
+  #banner #banner_content_wrapper #content {
+    width: 100%;
+    margin: 1em 1em 0 1em;
+  }
+}
+
+/* 
+jusqu'a ici */
+
+@media only screen and (max-width: 575px) {
+  #banner #banner_content_wrapper {
+    display: block;
+    width: 70%;
+  }
+  #banner #banner_content_wrapper #poster {
+    /* width: 250px; */
+    float: none;
+    display: block;
+    max-width: 100%;
+    margin: 1em 1em;
+  }
+  #banner #banner_content_wrapper #content {
+    width: 100%;
+    margin: 1em 1em 0 1em;
+  }
+  .row .post {
+    /* width: 250px; */
+    margin: 1em 1em 0 1em;
+    float: none;
+  }
+  #top_movies,
+  #top_shows {
+    margin-bottom: 2em;
+  }
+  #newsletter {
+    padding: 3em 0;
+  }
+  #newsletter h2 {
+    font-size: 1.35em;
+  }
+  #newsletter .sign_up_form {
+    margin-top: 2em;
+  }
+  #newsletter .sign_up_form input input[type="text"],
+  #newsletter .sign_up_form input input[type="email"] {
+    width: 90%;
+    margin-bottom: 1em;
+  }
+  #newsletter .sign_up_form input .button {
+    margin-top: 2em;
+  }
+}
+
+.like-btn {
+  border: none;
+  background: none;
+}
+
+.like-btn svg:not(:root),
+svg {
+  overflow: visible;
+}
+
+.maa {
+  margin: auto;
+}
+
+.video {
+  margin-top: 2em;
+}
+
+.link {
+  color: goldenrod;
+}

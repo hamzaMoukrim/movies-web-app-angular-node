@@ -1,0 +1,19 @@
+<div class="featured_movie_rating row">
+  <div class="stars">
+    <div *ngFor="let item of [].constructor(10); let i = index">
+      <div class="displayFlex" *ngIf="firstConditon(i); else not1">
+        <i class="star fas fa-star-half-alt"></i>
+      </div>
+      <ng-template #not1>
+        <div class="displayFlex" *ngIf="secondCondition(i); else not2">
+          <i class="star fas fa-star"></i>
+        </div>
+        <ng-template class="displayFlex" #not2>
+          <i class="star far fa-star"></i>
+        </ng-template>
+      </ng-template>
+    </div>
+
+    <span class="movie_average">{{ movie_average }}</span>
+  </div>
+</div>

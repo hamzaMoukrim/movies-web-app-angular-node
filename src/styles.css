@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  /*background-color: #fafafa;*/
+  color: #fff !important;
+  font-size: 13px;
+  height: 100%;
+  background: #1d719e;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #1d719e 0%, #572d7b 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #1d719e 0%, #572d7b 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(rgba(30, 27, 38, 0.95), rgba(30, 27, 38, 0.95)),
+    url("https://i.ibb.co/FDGqCmM/papers-co-ag74-interstellar-wide-space-film-movie-art-33-iphone6-wallpaper.jpg");
+  /* background: linear-gradient(71deg, #1d719e 0%, #572d7b 100%); */
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff516b', endColorstr='#572d7b',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

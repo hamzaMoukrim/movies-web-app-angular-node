@@ -1,0 +1,32 @@
+{
+  "name": "moviesApp",
+  "version": "1.0.0",
+  "description": "Api for moviesApp app",
+  "main": "index.js",
+  "engines": {
+    "node": "14.17.5"
+  },
+  "scripts": {
+    "server": "nodemon index.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run server\"",
+    "start": "npm run server"
+  },
+  "author": "hamza DEV",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "email-validator": "^2.0.4",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.8",
+    "mongoose-auto-increment": "^5.0.1",
+    "nodemon": "^2.0.6",
+    "swiper": "^6.4.15",
+    "uuid": "^8.3.2",
+    "valid-url": "^1.0.9"
+  }
+}

@@ -1,0 +1,150 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['']">MoviesApp</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 100px"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/popular']"
+            >POPULAR</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLinkActive="active"
+            [routerLink]="['/trending']"
+            aria-current="page"
+            >TRENDING</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/top']"
+            >TOP MOVIES</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" [routerLink]="['/fav']"
+            >FAVORITE MOVIES</a
+          >
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            GENRES
+          </a>
+          <ul
+            class="dropdown-menu dropdown-menu-large"
+            aria-labelledby="navbarScrollingDropdown"
+          >
+            <li>
+              <a [routerLink]="['genre', 'animation']" class="dropdown-item"
+                >Animation</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'adventure']" class="dropdown-item"
+                >Adventure</a
+              >
+            </li>
+
+            <li>
+              <a [routerLink]="['genre', 'action']" class="dropdown-item"
+                >Action</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'comedy']" class="dropdown-item"
+                >Comedy</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'documentary']" class="dropdown-item"
+                >Documentary</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'drama']" class="dropdown-item"
+                >Drama</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'family']" class="dropdown-item"
+                >Family</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'horror']" class="dropdown-item"
+                >Horror</a
+              >
+            </li>
+            <li>
+              <a [routerLink]="['genre', 'romance']" class="dropdown-item"
+                >Romance</a
+              >
+            </li>
+            <li>
+              <a
+                [routerLink]="['genre', 'science-fiction']"
+                class="dropdown-item"
+                >Science Fiction</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+          [(ngModel)]="userInput"
+          (ngModelChange)="onChangeSearchText()"
+        />
+
+        <button
+          *ngIf="auth.isLoggedIn(); else notlogin"
+          class="btn btn-outline-success"
+          (click)="logout()"
+        >
+          LOGOUT
+        </button>
+
+        <ng-template #notlogin>
+          <a
+            [routerLink]="['auth']"
+            routerLinkActive="router-link-active"
+            class="btn btn-outline-success"
+          >
+            LOGIN
+          </a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</nav>

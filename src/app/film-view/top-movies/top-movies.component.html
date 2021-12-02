@@ -1,0 +1,37 @@
+<div *ngIf="isLoaded; else notLoaded">
+  <div class="container">
+    <div class="row">
+      <div *ngFor="let film of films" class="col-md-4 col-xl-3 col-sm-6 mb-2">
+        <app-card-film [film]="film" [liked]="isFav(film.id)"> </app-card-film>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="films != null" class="row align-items-center">
+    <div class="d-flex justify-content-center">
+      <nav aria-label="...">
+        <ul class="pagination">
+          <li class="page-item" [ngClass]="{ disabled: currentPage === 1 }">
+            <button class="page-link" (click)="onPrev()" tabindex="-1">
+              Previous
+            </button>
+          </li>
+
+          <li
+            class="page-item"
+            [ngClass]="{ disabled: currentPage === totalPages }"
+          >
+            <button class="page-link" (click)="onLoadMore()">Next</button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<ng-template #notLoaded>
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border text-light" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+</ng-template>

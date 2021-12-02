@@ -1,0 +1,114 @@
+<!-- <form (ngSubmit)="onSignin()" [formGroup]="form">
+  <div class="col-lg-12 login-title">Login</div>
+  <div class="divider"></div>
+  <div class="form-group">
+    <label class="form-control-label">USERNAME</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="username"
+      id="username"
+    />
+    <div *ngIf="f.username.touched && f.username.invalid" class="">
+      <div *ngIf="f.username.errors && f.username.errors.required">
+        Username is required.
+      </div>
+
+      <div *ngIf="f.username.errors && f.username.errors.minlength">
+        Name should be 3 character.
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="form-control-label">PASSWORD</label>
+    <input
+      type="password"
+      formControlName="password"
+      id="password"
+      class="form-control"
+      i
+    />
+  </div>
+  <div class="col-lg-12 loginbttm">
+    <div class="col-lg-6 login-btm login-button">
+      <button type="submit" class="btn btn-outline-primary">LOGIN</button>
+    </div>
+  </div>
+
+  <div class="col-lg-6 login-btm login-text">
+   -->
+<!-- <a
+      [routerLink]="['signup']"
+      routerLinkActive="router-link-active"
+      type="submit"
+      class="btn btn-outline-primary"
+    >
+      SIGN UP
+    </a>
+  </div>
+</form>  -->
+
+<form class="signup" (ngSubmit)="onSignin()" [formGroup]="form">
+  <h1>Login</h1>
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="text"
+      formControlName="username"
+      id="username"
+      required
+    />
+    <label class="signup__label" for="email">Username</label>
+  </div>
+  <div
+    *ngIf="f.username.touched && f.username.invalid"
+    class="alert alert-danger"
+  >
+    <div *ngIf="f.username.errors && f.username.errors.required">
+      Username is required.
+    </div>
+
+    <div *ngIf="f.username.errors && f.username.errors.minlength">
+      Username should be 3 character.
+    </div>
+  </div>
+
+  <div class="signup__field">
+    <input
+      class="signup__input"
+      type="password"
+      formControlName="password"
+      id="password"
+      required
+    />
+    <label class="signup__label" for="password">Password</label>
+  </div>
+
+  <div
+    *ngIf="f.password.touched && f.password.invalid"
+    class="alert alert-danger"
+  >
+    <div *ngIf="f.password.errors && f.password.errors.required">
+      Password is required.
+    </div>
+
+    <div *ngIf="f.password.errors && f.password.errors.minlength">
+      password should be 3 character.
+    </div>
+  </div>
+
+  <button type="submit">Sign in</button>
+
+  <h2>
+    Not a member ?
+    <a
+      [routerLink]="['signup']"
+      routerLinkActive="router-link-active"
+      type="submit"
+      class="btn btn-outline-primary"
+    >
+      Sign up now
+    </a>
+  </h2>
+</form>
